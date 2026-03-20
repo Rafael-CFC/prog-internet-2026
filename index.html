@@ -1,38 +1,61 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
-    <title>Mini-Site</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lamine Yamal - Mini-Site</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <header>
-        <h1>Lamine Yamal/<h1>
+        <div class="container">
+            <h1>Lamine Yamal</h1>
+        </div>
     </header>
+
     <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="contato.html">Contato</a></li>
-        </ul>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </div>
     </nav>
-    <main>
+
+    <main class="container">
         <section>
             <h2>Rafael - 2026</h2>
-            <h2>Quem é Lamine Yamal?</h2>
-            <p>Lamine Yamal (nascido em 13 de julho de 2007) é um atacante espanhol de destaque mundial, considerado a
-                maior joia do FC Barcelona e da seleção espanhola. Com apenas 18 anos em 2026, ele se tornou um titular
-                indispensável, conhecido por seu drible veloz, inteligência técnica e por quebrar inúmeros recordes de
-                precocidade</p>
+            <h3>Quem é Lamine Yamal?</h3>
+            <p>Lamine Yamal é um atacante espanhol de destaque mundial, considerado a maior joia do FC Barcelona e da seleção espanhola.</p>
+        </section>
+
+        <section class="cards">
+            <article class="card">
+                <img src="yamal.jpg" alt="Talento de Yamal">
+                <h3>Talento</h3>
+                <p>Conhecido por seu drible veloz e inteligência técnica superior.</p>
+                <a href="#">Ver mais</a>
+            </article>
+
+            <article class="card">
+                <img src="yamal2.jpg" alt="Recordes de Yamal">
+                <h3>Recordes</h3>
+                <p>O jogador mais jovem a marcar gols na La Liga e na Eurocopa.</p>
+                <a href="#">Ver mais</a>
+            </article>
+
+            <article class="card">
+                <img src="yamal3.jpg" alt="Yamal na Seleção">
+                <h3>Seleção</h3>
+                <p>Titular indispensável na conquista da Euro 2024 pela Espanha.</p>
+                <a href="#">Ver mais</a>
+            </article>
         </section>
     </main>
-    <footer>
-    </footer>
-    <p>Lamine Yamal</p>
-    <img src="data:image/jpeg;base64,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"
-        alt="">
-</body>
 
+    <footer>
+        <p>Rafael Fenianos - 2026</p>
+    </footer>
+</body>
 </html>
