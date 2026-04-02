@@ -16,41 +16,65 @@
     <nav>
         <div class="container">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="contato.html">Contato</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
         </div>
     </nav>
 
     <main class="container">
-        <section>
+        <section id="sobre">
             <h2>Rafael - 2026</h2>
             <h3>Quem é Lamine Yamal?</h3>
             <p>Lamine Yamal é um atacante espanhol de destaque mundial, considerado a maior joia do FC Barcelona e da seleção espanhola.</p>
         </section>
 
-        <section class="cards">
-            <article class="card">
+        <section class="cards" id="home">
+            <div class="card">
                 <img src="yamal.jpg" alt="Talento de Yamal">
                 <h3>Talento</h3>
                 <p>Conhecido por seu drible veloz e inteligência técnica superior.</p>
-                <a href="#">Ver mais</a>
-            </article>
+            </div>
 
-            <article class="card">
+            <div class="card">
                 <img src="yamal2.jpg" alt="Recordes de Yamal">
                 <h3>Recordes</h3>
                 <p>O jogador mais jovem a marcar gols na La Liga e na Eurocopa.</p>
-                <a href="#">Ver mais</a>
-            </article>
+            </div>
 
-            <article class="card">
+            <div class="card">
                 <img src="yamal3.jpg" alt="Yamal na Seleção">
                 <h3>Seleção</h3>
                 <p>Titular indispensável na conquista da Euro 2024 pela Espanha.</p>
-                <a href="#">Ver mais</a>
-            </article>
+            </div>
+        </section>
+
+        <section id="contato" style="background-color: transparent; box-shadow: none;">
+            <form class="form-contato">
+                <h2>Formulário de Contato</h2>
+                
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" required minlength="3" placeholder="Digite seu nome"> 
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" required placeholder="exemplo@email.com"> 
+
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" pattern="[0-9]{10,11}" placeholder="(48)1121-1234"> 
+
+                <label forx1="assunto">Assunto:</label>
+                <select id="assunto" required>
+                    <option value="">Selecione</option>
+                    <option value="duvida">Dúvida</option>
+                    <option value="sugestao">Sugestão</option>
+                    <option value="contato">Contato</option>
+                </select> 
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" rows="4" required></textarea> 
+                <button type="submit">Enviar</button> 
+            </form>
         </section>
     </main>
 

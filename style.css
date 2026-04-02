@@ -1,27 +1,27 @@
-/* --- Estilos Gerais (Roteiro 3) --- */
+/* --- Estilos Gerais --- */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #f2f2f2; /* Cor de fundo exigida */
+    background-color: #f2f2f2;
 }
 
 .container {
-    width: 80%; /* Alinhamento centralizado do roteiro */
+    width: 80%;
     margin: 0 auto;
 }
 
 header {
-    background-color: #003366; /* Azul escuro padrão */
+    background-color: #003366;
     color: white;
     padding: 20px;
     text-align: center;
 }
 
-/* --- Navegação com Flexbox (Roteiro 4) --- */
+/* --- Navegação --- */
 nav ul {
-    display: flex; /* Ativa o modo flexível */
-    justify-content: center; /* Centraliza os itens */
-    gap: 20px; /* Espaçamento entre links */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
     list-style: none;
     padding: 10px 0;
     background-color: white;
@@ -32,13 +32,13 @@ nav a {
     text-decoration: none;
     color: #003366;
     font-weight: bold;
+    padding: 5px 10px;
 }
 
 nav a:hover {
-    color: #ff6600; /* Efeito hover laranja exigido */
+    color: #ff6600;
 }
 
-/* --- Seções e Cards (Roteiros 3 e 4) --- */
 section {
     background-color: white;
     padding: 20px;
@@ -47,39 +47,130 @@ section {
     box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
 }
 
+/* --- Estilização dos Cards (Roteiro 05) --- */
 .cards {
     display: flex;
     gap: 20px;
     justify-content: center;
-    flex-wrap: wrap; /* Quebra de linha para responsividade */
+    text-align: center;
     background-color: transparent;
     box-shadow: none;
+    padding: 0;
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
     background-color: white;
     padding: 20px;
-    width: 250px; /* Largura fixa do card */
+    width: 250px;
     border-radius: 8px;
-    text-align: center;
     box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+    text-align: center;
 }
 
-/* --- ESTILO PARA AS FOTOS APARECEREM --- */
 .card img {
-    width: 100%;       /* Ocupa toda a largura do quadradinho */
-    height: auto;      /* Mantém a proporção da imagem */
-    border-radius: 4px;
-    margin-bottom: 15px;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
-/* --- Responsividade (Media Query do Roteiro 4) --- */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+/* =========================================================
+   ESTILIZAÇÃO DO FORMULÁRIO (IDÊNTICO À IMAGEM W3SCHOOLS)
+   ========================================================= */
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    padding: 0 20px;
+}
+
+.form-contato {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+}
+
+/* Forçando a label a quebrar a linha e dar o espaçamento correto */
+.form-contato label {
+    display: block; 
+    font-weight: bold;
+    font-size: 16px;
+    color: #000;
+    margin-top: 20px; 
+    margin-bottom: 8px; 
+    text-align: left;
+}
+
+.form-contato label:first-of-type {
+    margin-top: 0;
+}
+
+/* Inputs e Textarea ocupando 100% da largura da caixinha */
+.form-contato input, 
+.form-contato textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box; /* Isso impede que o input vaze para fora da caixa branca */
+    outline: none;
+}
+
+/* Efeito ao clicar */
+.form-contato input:focus, 
+.form-contato textarea:focus {
+    border-color: #003366;
+}
+
+/* Forçando a borda verde igual a da foto para os campos preenchidos */
+.form-contato input:valid {
+    border: 1px solid #2b8a3e; 
+}
+
+/* Botão full width azul escuro */
+.form-contato button {
+    width: 100%;
+    background-color: #003366;
+    color: #ffffff;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.form-contato button:hover {
+    background-color: #002244;
+}
+
+/* --- Responsividade --- */
 @media (max-width: 768px) {
     .cards {
-        flex-direction: column; /* Empilha no celular */
+        flex-direction: column;
         align-items: center;
     }
     
+    .form-contato {
+        padding: 20px;
+    }
+
     .container {
         width: 95%;
     }
