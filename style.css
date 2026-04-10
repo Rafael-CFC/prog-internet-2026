@@ -32,7 +32,6 @@ nav a {
     text-decoration: none;
     color: #003366;
     font-weight: bold;
-    padding: 5px 10px;
 }
 
 nav a:hover {
@@ -47,15 +46,13 @@ section {
     box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
 }
 
-/* --- Estilização dos Cards (Roteiro 05) --- */
+/* --- Estilização dos Cards --- */
 .cards {
     display: flex;
     gap: 20px;
     justify-content: center;
-    text-align: center;
     background-color: transparent;
     box-shadow: none;
-    padding: 0;
 }
 
 .card {
@@ -81,83 +78,61 @@ section {
     transition: all 0.3s ease;
 }
 
-/* =========================================================
-   ESTILIZAÇÃO DO FORMULÁRIO (IDÊNTICO À IMAGEM W3SCHOOLS)
-   ========================================================= */
-
-.form-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-    padding: 0 20px;
-}
-
+/* --- Formulário --- */
 .form-contato {
-    background-color: #ffffff;
-    padding: 30px 40px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
     max-width: 500px;
-    box-sizing: border-box;
+    margin: 0 auto;
 }
 
-/* Forçando a label a quebrar a linha e dar o espaçamento correto */
 .form-contato label {
-    display: block; 
     font-weight: bold;
-    font-size: 16px;
-    color: #000;
-    margin-top: 20px; 
-    margin-bottom: 8px; 
     text-align: left;
 }
 
-.form-contato label:first-of-type {
-    margin-top: 0;
-}
-
-/* Inputs e Textarea ocupando 100% da largura da caixinha */
-.form-contato input, 
+.form-contato input[type="text"], 
+.form-contato input[type="email"], 
+.form-contato input[type="tel"], 
 .form-contato textarea {
-    width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 15px;
-    font-family: Arial, sans-serif;
-    box-sizing: border-box; /* Isso impede que o input vaze para fora da caixa branca */
-    outline: none;
-}
-
-/* Efeito ao clicar */
-.form-contato input:focus, 
-.form-contato textarea:focus {
-    border-color: #003366;
-}
-
-/* Forçando a borda verde igual a da foto para os campos preenchidos */
-.form-contato input:valid {
-    border: 1px solid #2b8a3e; 
-}
-
-/* Botão full width azul escuro */
-.form-contato button {
     width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="text"]:valid,
+input[type="email"]:valid,
+input[type="tel"]:valid,
+textarea:valid {
+    border: 1px solid green;
+}
+
+input[type="text"]:invalid,
+input[type="email"]:invalid,
+input[type="tel"]:invalid,
+textarea:invalid {
+    border: 1px solid red;
+}
+
+.form-contato input[type="submit"], 
+.form-contato button {
     background-color: #003366;
-    color: #ffffff;
+    color: white;
     padding: 15px;
     border: none;
     border-radius: 5px;
-    font-size: 15px;
-    font-weight: bold;
     cursor: pointer;
-    margin-top: 25px;
-    transition: background-color 0.3s ease;
+    font-weight: bold;
+    width: 100%;
+    transition: 0.3s;
 }
 
+.form-contato input[type="submit"]:hover, 
 .form-contato button:hover {
-    background-color: #002244;
+    background-color: #0055aa;
 }
 
 /* --- Responsividade --- */
@@ -167,10 +142,6 @@ section {
         align-items: center;
     }
     
-    .form-contato {
-        padding: 20px;
-    }
-
     .container {
         width: 95%;
     }
